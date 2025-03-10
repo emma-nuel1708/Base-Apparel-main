@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --Josefin: "Josefin Sans", sans-serif;
+  }
+  body {
+    font-family: var(--Josefin);
+  }
+  
+  main {
+    display: flex;
+  }
+  
+  .left-container {
+    min-height: 100vh;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 55%;
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  .left {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .left-container .left .logo {
+    /* background-color: aqua; */
+    margin-bottom: 100px;
+  }
+  
+  .left-container .left .text h1 span {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+  }
+  
+  .left-container .left .text h1 {
+    font-size: 9vw;
+    font-weight: 500;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+  }
+  .left-container .left .text p {
+    color: var(--Desaturated-Red);
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 50px 0 0;
+    margin: 0 0 50px;
+  }
+  .left-container .left form {
+    display: flex;
+  }
+  .left-container .left form input {
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid var(--Desaturated-Red);
+  }
+  .left-container .left form input::placeholder {
+    color: var(--Desaturated-Red);
+    padding: 0 0 0 30px;
+  }
+  .left-container .left form button {
+    background-color: var(--Desaturated-Red);
+    border: none;
+    border-radius: 30px;
+    width: 90px;
+    margin: 0 0 0 -50px;
+  }
+  
+  .hero {
+    width: 45%;
+  }
+  
+  .hero img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease-in;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .left {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    main {
+      flex-direction: column-reverse;
+    }
+    .hero{
+      width: 100%;
+      margin-top: 96px;
+    }
+    
+    .left-container .left .logo{
+      padding: 30px 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* background: #975757; */
+      width: 100%;
+    }
+    .left-container{
+      background-image: none;
+      width: 100%;
+    }
+  .left{
+    width: 70%;
+    
+  }
+    .left-container .left .text{
+      text-align: center;
+      padding: 0;
+    }
+    .left-container .left .text p{
+      padding: 0;
+    }
+  
+    .left-container .left form {
+      justify-content: center;
+    }
+  }
+  
